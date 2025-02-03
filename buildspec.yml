@@ -1,0 +1,9 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      dotnet: 6.0
+  build:
+    commands:
+      - dotnet restore CarPoolingWebAPI/CarPoolingWebAPI.sln
+      - dotnet build CarPoolingWebAPI/CarPoolingWebAPI.sln
