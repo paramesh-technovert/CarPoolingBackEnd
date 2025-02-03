@@ -9,7 +9,7 @@ phases:
   build:
     commands:
       - dotnet publish CarPoolingWebAPI/carPoolingWebAPI.sln -c Release -o ./output
-  artifacts:
-    files:
-      - output/**/*
+artifacts:
+  files:
+    - output/**/*
     
