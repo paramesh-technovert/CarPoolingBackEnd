@@ -3,7 +3,7 @@ phases:
   install:
     commands:
       - echo Installing .NET 7.0 SDK...
-      - curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin --channel STS 
+      - curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin --version 7.0.100 --channel STS
       - dotnet --version
   pre_build:
     commands:
