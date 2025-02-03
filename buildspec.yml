@@ -1,8 +1,10 @@
 version: 0.2
 phases:
   install:
-    runtime-versions:
-      dotnet: 7.0
+    commands:
+      - echo Installing .NET 7.0 SDK...
+      - curl -sSL https://dotnet.microsoft.com/download/dotnet/thank-you/sdk-7.0.100-linux-x64-binaries | sudo bash
+      - dotnet --version
   pre_build:
     commands:
       - dotnet restore CarPoolingWebAPI
