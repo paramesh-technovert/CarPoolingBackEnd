@@ -3,7 +3,13 @@ phases:
   install:
     runtime-versions:
       dotnet: 6.0
+  pre_build:
+    commands:
+      - dotnet restore CarPoolingWebAPI/carPoolingWebAPI.sln
   build:
     commands:
-      - dotnet restore CarPoolingWebAPI/CarPoolingWebAPI.sln
-      - dotnet build CarPoolingWebAPI/CarPoolingWebAPI.sln
+      - dotnet publish CarPoolingWebAPI/carPoolingWebAPI.sln -c Release -o ./output
+  artifacts:
+    files:
+      - output/**/*
+    
