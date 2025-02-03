@@ -5,7 +5,7 @@ phases:
       dotnet: 6.0
   pre_build:
     commands:
-      - dotnet restore CarPoolingWebAPI/CarPoolingWebAPI.sln
+      - dotnet restore CarPoolingWebAPI
   build:
     commands:
       - dotnet publish CarPoolingWebAPI/CarPoolingWebAPI.sln -c Release -o ./output
